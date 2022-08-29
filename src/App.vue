@@ -81,7 +81,7 @@ export default {
     scrollTo(anchor) {
       const el = document.querySelector(anchor)
       el && el.scrollIntoView({ behavior: 'smooth' })
-    }
+    },
   }
 }
 </script>

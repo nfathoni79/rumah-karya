@@ -2,7 +2,7 @@
   <div class="max-w-screen-xl mx-auto px-4 pb-8 lg:pb-16">
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-10 text-gray-500 dark:text-gray-400">
       <a v-for="partner in partners" :key="partner.name" :href="partner.link" target="_blank">
-        <img class="h-10 mx-auto" :src="partner.image" :alt="partner.name">
+        <img class="h-10 mx-auto" :src="getAssetUrl(partner.image)" :alt="partner.name">
       </a>
     </div>
   </div>
@@ -16,35 +16,40 @@ export default {
         {
           name: 'KemenkopUKM',
           link: 'https://kemenkopukm.go.id/',
-          image: '/src/assets/kemenkopukm.png',
+          image: 'kemenkopukm.png',
         },
         {
           name: 'BP2MI',
           link: 'https://www.bp2mi.go.id/',
-          image: '/src/assets/bp2mi.png',
+          image: 'bp2mi.png',
         },
         {
           name: 'Kemenkomarves',
           link: 'https://maritim.go.id/',
-          image: '/src/assets/kemenkomarves.png',
+          image: 'kemenkomarves.png',
         },
         {
           name: 'Bank Indonesia',
           link: 'https://www.bi.go.id/',
-          image: '/src/assets/bi.png',
+          image: 'bi.png',
         },
         {
           name: 'PT PELNI',
           link: 'https://www.pelni.co.id/',
-          image: '/src/assets/pelni.png',
+          image: 'pelni.png',
         },
         {
           name: 'PT Perindo',
           link: 'http://www.perikananindonesia.co.id/',
-          image: '/src/assets/perindo.png',
+          image: 'perindo.png',
         },
       ],
     }
-  }
+  },
+  methods: {
+    getAssetUrl(fileName) {
+      return new URL(`/src/assets/${fileName}`, import.meta.url).href
+    },
+  },
 }
 </script>

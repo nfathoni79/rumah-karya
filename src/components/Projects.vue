@@ -13,7 +13,7 @@
       <!-- Project Card -->
       <div v-for="(e, i) in maxProjects" :key="i"
         class="flex flex-col max-w-lg mx-auto text-gray-900 bg-white border border-gray-100 rounded-lg shadow hover:shadow-lg dark:border-gray-600 dark:bg-gray-800 dark:text-white">
-        <img class="rounded-t-lg" :src="projects[i].image" :alt="projects[i].name" />
+        <img class="rounded-t-lg" :src="getAssetUrl(projects[i].image)" :alt="projects[i].name" />
         <div class="p-6 xl:p-8 border-t border-gray-100 dark:border-gray-600">
           <h4 class="mb-4 text-xl font-semibold">
             {{ projects[i].name }}
@@ -62,7 +62,10 @@ export default {
     },
     showLess() {
       this.maxProjects = 8
-    }
+    },
+    getAssetUrl(fileName) {
+      return new URL(`/src/assets/${fileName}`, import.meta.url).href
+    },
   },
 }
 </script>
