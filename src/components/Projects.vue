@@ -10,42 +10,40 @@
     </div>
 
     <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 xl:gap-6">
-      <!-- Project Card -->
-      <div v-for="(e, i) in maxProjects" :key="i"
-        class="flex flex-col max-w-lg mx-auto text-gray-900 bg-white border border-gray-100 rounded-lg shadow hover:shadow-lg dark:border-gray-600 dark:bg-gray-800 dark:text-white">
-        <img class="rounded-t-lg" :src="getAssetUrl(projects[i].image)" :alt="projects[i].name" />
-        <div class="p-6 xl:p-8 border-t border-gray-100 dark:border-gray-600">
-          <h4 class="mb-4 text-xl font-semibold">
-            {{ projects[i].name }}
-          </h4>
-          <p v-if="projects[i].type == 'government'" class="text-gray-500 dark:text-gray-400">
-            Client: <span class="font-light">{{ projects[i].client }}</span><br>
-            Project: <span class="font-light">{{ projects[i].service }}</span><br>
-            Task: <span class="font-light">{{ projects[i].task }}</span>
-          </p>
-          <p v-else class="text-gray-500 dark:text-gray-400">
-            {{ projects[i].task }}
-          </p>
-        </div>
-      </div>
+      <ProjectCard v-for="(e, i) in maxProjects" :key="i" :project="projects[i]" />
     </div>
 
     <!-- Pagination -->
     <div class="flex justify-center mt-8 mx-auto space-x-4">
-      <a v-if="maxProjects > 8" href="#" @click.prevent="showLess" class="text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-yellow-500 dark:hover:bg-yellow-600 focus:outline-none dark:focus:ring-yellow-700">
+      <button v-if="maxProjects > 8" @click="showLess"
+        class="sm:mr-2 lg:mr-0 rounded-lg
+        border-2 border-orange-600 hover:border-orange-700
+        bg-transparent hover:bg-orange-100
+        px-4 lg:px-5 py-2 lg:py-2.5
+        font-medium text-sm text-orange-700
+        focus:outline-none focus:ring-4 focus:ring-orange-300">
         Show Less
-      </a>
-      <a v-if="maxProjects < projects.length" href="#" @click.prevent="showMore" class="text-white bg-orange-600 hover:bg-orange-700 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-orange-500 dark:hover:bg-orange-600 focus:outline-none dark:focus:ring-orange-700">
+      </button>
+      <button v-if="maxProjects < projects.length" @click="showMore"
+        class="sm:mr-2 lg:mr-0 rounded-lg
+        bg-orange-600 hover:bg-orange-700
+        px-4 lg:px-5 py-2 lg:py-2.5
+        font-medium text-sm text-white
+        focus:outline-none focus:ring-4 focus:ring-orange-300">
         Show More
-      </a>
+      </button>
     </div>
   </div>
 </template>
 
 <script>
-import projects from '../data/projects.js';
+import ProjectCard from './ProjectCard.vue'
+import projects from '../data/projects.js'
 
 export default {
+  components: {
+    ProjectCard,
+  },
   data() {
     return {
       projects,
@@ -62,9 +60,6 @@ export default {
     },
     showLess() {
       this.maxProjects = 8
-    },
-    getAssetUrl(fileName) {
-      return new URL(`/src/assets/${fileName}`, import.meta.url).href
     },
   },
 }
