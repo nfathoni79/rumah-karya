@@ -1,4 +1,13 @@
 <template>
+  <!-- Preloader -->
+  <transition leave-active-class="transition ease-in duration-200"
+    leave-from-class="opacity-100" leave-to-class="opacity-0">
+    <div v-if="!windowLoaded"
+      class="fixed inset-0 z-20 bg-orange-200 flex items-center justify-center">
+      <Spinner class="h-20 w-20" />
+    </div>
+  </transition>
+
   <header class="fixed w-full shadow-sm">
     <Navbar @scrollTo="scrollTo" :activeNav="activeNav" />
   </header>
@@ -38,6 +47,7 @@ import Services from './components/Services.vue'
 import Projects from './components/Projects.vue'
 import Contacts from './components/Contacts.vue'
 import Bottom from './components/Bottom.vue'
+import Spinner from './components/Spinner.vue'
 
 export default {
   components: {
@@ -49,14 +59,17 @@ export default {
     Projects,
     Contacts,
     Bottom,
+    Spinner,
   },
   data() {
     return {
+      windowLoaded: false,
       sections: [],
       activeNav: '#home',
     }
   },
   created() {
+    window.addEventListener('load', () => this.windowLoaded = true)
     window.addEventListener('scroll', this.handleScroll)
   },
   mounted() {
