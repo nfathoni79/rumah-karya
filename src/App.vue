@@ -4,7 +4,7 @@
     leave-from-class="opacity-100" leave-to-class="opacity-0">
     <div v-if="!windowLoaded"
       class="fixed inset-0 z-20 bg-orange-200 flex items-center justify-center">
-      <Spinner class="h-20 w-20" />
+      <Spinner class="h-20 w-20 text-orange-600" />
     </div>
   </transition>
 

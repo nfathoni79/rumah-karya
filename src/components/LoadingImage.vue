@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="!loaded">
-      <Spinner />
+      <Spinner class="h-8 w-8 text-orange-600" />
     </div>
     <img v-show="loaded" @load="loaded = true"
       :src="url" :alt="name" :class="className" />
