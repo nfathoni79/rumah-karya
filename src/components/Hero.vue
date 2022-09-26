@@ -8,7 +8,7 @@
       </h1>
 
       <p class="max-w-2xl mb-6 lg:mb-8 font-light text-gray-500 dark:text-gray-400 md:text-lg lg:text-xl">
-        We presents you with outstanding brand visual capability,
+        We present you with outstanding brand visual capability,
         which not only maintains the brand values,
         yet we develop the visual quality and brand story behind it.
       </p>
