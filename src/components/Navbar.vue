@@ -23,7 +23,10 @@
       <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1">
         <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
           <li v-for="item in navigations" :key="item.name">
-            <a @click.prevent="$emit('scrollTo', item.link)" :href="item.link" :class="[item.link == activeNav ? ' font-semibold underline underline-offset-4 decoration-2 text-white p-0' : 'border-0 text-gray-100 hover:text-white p-0']">
+            <a @click.prevent="$emit('scrollTo', item.link)" :href="item.link"
+              :class="[item.link == activeNav
+              ? ' font-semibold underline underline-offset-4 decoration-2 text-white p-0'
+              : 'border-0 text-orange-100 hover:text-white p-0']">
               {{ item.name }}
             </a>
           </li>
@@ -36,7 +39,11 @@
       <div class="items-center justify-between w-full flex lg:w-auto lg:order-1" id="mobile-menu-2">
         <ul class="flex flex-col w-full mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
           <li v-for="item in navigations" :key="item.name">
-            <a @click.prevent="$emit('scrollTo', item.link)" :href="item.link" :class="[item.link == activeNav ? 'text-orange-600 bg-white' : 'text-gray-200 border-2 border-transparent hover:border-white', 'block py-2 pl-3 pr-4 rounded-md']">
+            <a @click.prevent="$emit('scrollTo', item.link)" :href="item.link"
+              :class="[item.link == activeNav
+              ? 'text-orange-600 bg-white'
+              : 'text-orange-100 border-2 border-transparent hover:border-white',
+              'block py-2 pl-3 pr-4 rounded-md']">
               {{ item.name }}
             </a>
           </li>
