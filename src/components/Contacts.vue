@@ -43,7 +43,7 @@
           Call Us
         </h4>
         <p class="text-gray-500 dark:text-gray-400">
-          <a href="https://wa.me/628111496887" target="_blank" class="hover:underline">+62 8111 496 887</a>
+          <a href="https://wa.me/6285849665523" target="_blank" class="hover:underline">+62 858 4966 5523</a>
         </p>
       </div>
     </div>
