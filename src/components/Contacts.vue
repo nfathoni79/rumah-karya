@@ -1,10 +1,10 @@
 <template>
   <div class="max-w-screen-xl px-4 py-24 lg:px-6 mx-auto">
     <div class="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
-      <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+      <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900">
         Contact Us
       </h2>
-      <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
+      <p class="mb-5 font-light text-gray-500 sm:text-xl">
         Get connected with us.
       </p>
     </div>
@@ -15,35 +15,48 @@
       class="w-full h-96 col-span-4 md:col-span-2 sm:row-span-2 rounded-md shadow-md hover:shadow-lg"></iframe>
 
       <!-- Address -->
-      <div class="col-span-4 md:col-span-2 p-4 xl:p-6 text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-600 rounded-lg shadow hover:shadow-lg flex flex-col items-center justify-center">
+      <div class="flex flex-col items-center justify-center
+        col-span-4 md:col-span-2 p-4 xl:p-6
+        rounded-lg border border-gray-100 shadow hover:shadow-lg
+        bg-white text-gray-900">
         <LocationMarkerIcon class="w-8 h-8 text-orange-600" />
         <h4 class="mb-2 text-xl font-semibold">
           Visit Us
         </h4>
-        <p class="text-gray-500 dark:text-gray-400">
+        <p class="text-center text-gray-500">
           Jl. Puri Marina Raya No. 5, Ancol, Pademangan, North Jakarta
         </p>
       </div>
 
       <!-- Email -->
-      <div class="col-span-2 md:col-span-1 p-4 xl:p-6 text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-600 rounded-lg shadow hover:shadow-lg flex flex-col items-center justify-center">
+      <div class="flex flex-col items-center justify-center
+        col-span-2 md:col-span-1 p-4 xl:p-6
+        rounded-lg border border-gray-100 shadow hover:shadow-lg
+        bg-white text-gray-900">
         <MailIcon class="w-8 h-8 text-orange-600" />
         <h4 class="mb-2 text-xl font-semibold">
           Email Us
         </h4>
-        <p class="text-gray-500 dark:text-gray-400">
-          <a href="mailto:cs@rumahkarya.id" target="_blank" class="hover:underline">cs@rumahkarya.id</a>
+        <p class="text-center text-gray-500">
+          <a href="mailto:cs@rumahkarya.id" target="_blank" class="hover:underline">
+            cs@rumahkarya.id
+          </a>
         </p>
       </div>
 
       <!-- Phone -->
-      <div class="col-span-2 md:col-span-1 p-4 xl:p-6 text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-600 rounded-lg shadow hover:shadow-lg flex flex-col items-center justify-center">
+      <div class="flex flex-col items-center justify-center
+        col-span-2 md:col-span-1 p-4 xl:p-6
+        rounded-lg border border-gray-100 shadow hover:shadow-lg
+        bg-white text-gray-900">
         <PhoneIcon class="w-8 h-8 text-orange-600" />
         <h4 class="text-xl font-semibold">
           Call Us
         </h4>
-        <p class="text-gray-500 dark:text-gray-400">
-          <a href="https://wa.me/6285849665523" target="_blank" class="hover:underline">+62 858 4966 5523</a>
+        <p class="text-center text-gray-500">
+          <a href="https://wa.me/6285849665523" target="_blank" class="hover:underline">
+            +62 858 4966 5523
+          </a>
         </p>
       </div>
     </div>

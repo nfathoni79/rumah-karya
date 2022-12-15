@@ -14,6 +14,16 @@ module.exports = {
       fontFamily: {
         'sans': ['Raleway', ...defaultTheme.fontFamily.sans],
       },
+      keyframes: {
+        scale: {
+          '0%': { transform: 'scale(1, 1)' },
+          '50%': { transform: 'scale(1.08, 1.05)' },
+          '100%': { transform: 'scale(1, 1)' },
+        }
+      },
+      animation: {
+        scale: 'scale 5s ease-in-out infinite',
+      },
     },
   },
   plugins: [],
