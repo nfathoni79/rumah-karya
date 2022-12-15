@@ -77,8 +77,8 @@ export default [
     image: 'noah.png',
     type: 'government',
     client: 'Bank Indonesia',
-    service: 'CSR Ship Branding',
-    task: 'Original Logo',
+    service: 'Original Logo',
+    task: 'CSR Ship Branding',
   },
   {
     id: 10,
@@ -86,8 +86,8 @@ export default [
     image: 'pelnix.png',
     type: 'government',
     client: 'PT. PELNI',
-    service: 'Learning Platform Planning',
-    task: 'Original Logo and Presentation Template',
+    service: 'Original Logo and Presentation Template',
+    task: 'Learning Platform Planning',
   },
   {
     id: 11,
@@ -95,8 +95,8 @@ export default [
     image: 'pfx.png',
     type: 'government',
     client: 'PT. Perindo',
-    service: 'Platform Branding',
-    task: 'Original Logo',
+    service: 'Original Logo',
+    task: 'Platform Branding',
   },
   {
     id: 12,

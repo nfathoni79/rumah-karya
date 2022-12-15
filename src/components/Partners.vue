@@ -1,8 +1,11 @@
 <template>
-  <div class="max-w-screen-xl mx-auto px-4 pb-8 lg:pb-16">
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-10 text-gray-500 dark:text-gray-400">
+  <div class="mx-auto max-w-screen-xl px-4 pb-8 lg:pb-16">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6
+      gap-6 sm:gap-10 text-gray-500">
       <a v-for="partner in partners" :key="partner.name" :href="partner.link" target="_blank">
-        <img class="h-10 mx-auto" :src="getAssetUrl(partner.image)" :alt="partner.name">
+        <img :src="getAssetUrl(partner.image)" :alt="partner.name"
+          class="h-10 mx-auto grayscale hover:grayscale-0 opacity-90 hover:opacity-100
+          transition ease-in-out duration-300">
       </a>
     </div>
   </div>

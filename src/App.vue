@@ -3,13 +3,16 @@
   <transition leave-active-class="transition ease-in duration-200"
     leave-from-class="opacity-100" leave-to-class="opacity-0">
     <div v-if="!windowLoaded"
-      class="fixed inset-0 z-20 bg-orange-200 flex items-center justify-center">
-      <Spinner class="h-20 w-20 text-orange-600" />
+      class="fixed z-20 inset-0 flex flex-col items-center justify-center bg-orange-200">
+      <Spinner class="h-20 w-80 text-orange-600" />
+      <p class="mt-4 text-center text-xl font-bold text-orange-600">
+        Take your time
+      </p>
     </div>
   </transition>
 
-  <header class="fixed w-full shadow-sm">
-    <Navbar @scrollTo="scrollTo" :activeNav="activeNav" />
+  <header class="fixed z-10 w-full shadow-sm">
+    <Navbar @scrollTo="scrollTo" :activeNav="activeNav" :scrollDown="scrollDown" />
   </header>
 
   <section id="home" class="bg-white">
@@ -66,6 +69,8 @@ export default {
       windowLoaded: false,
       sections: [],
       activeNav: '#home',
+      oldScroll: 0,
+      scrollDown: true,
     }
   },
   created() {
@@ -80,6 +85,11 @@ export default {
   },
   methods: {
     handleScroll(event) {
+      // Menentukan arah scroll
+      this.scrollDown = this.oldScroll < window.scrollY
+      this.oldScroll = window.scrollY
+
+      // Menentukan menu yang aktif
       this.sections.forEach((sec) => {
         let top = window.scrollY
         let offset = sec.offsetTop

@@ -6,17 +6,18 @@
     <div class="w-full aspect-[3/2] flex items-center justify-center bg-orange-100">
       <LoadingImage :url="getAssetUrl(project.image)" :name="project.name" />
     </div>
-    <div class="p-6 xl:p-8 border-t border-gray-100 dark:border-gray-600">
-      <h4 class="mb-4 text-xl font-semibold">
+    <div class="p-6 xl:p-8 border-t border-gray-100">
+      <h4 class="text-xl font-semibold">
         {{ project.name }}
       </h4>
-      <p v-if="project.type == 'government'"
-        class="text-gray-500 dark:text-gray-400">
-        Client: <span class="font-light">{{ project.client }}</span><br>
-        Project: <span class="font-light">{{ project.service }}</span><br>
-        Task: <span class="font-light">{{ project.task }}</span>
-      </p>
-      <p v-else class="text-gray-500 dark:text-gray-400">
+      <div v-if="project.type == 'government'" class="text-gray-500">
+        <p class="mt-4">{{ project.task }}</p>
+        <p class="inline-flex items-center">
+          <UsersIcon class="mr-1 w-4 h-4" /> {{ project.client }}
+        </p>
+        <p class="mt-4 text-sm">{{ project.service }}</p>
+      </div>
+      <p v-else class="mt-4 text-sm text-gray-500">
         {{ project.task }}
       </p>
     </div>
@@ -24,10 +25,12 @@
 </template>
 
 <script>
+import { UsersIcon } from '@heroicons/vue/solid'
 import LoadingImage from './LoadingImage.vue'
 
 export default {
   components: {
+    UsersIcon,
     LoadingImage,
   },
   props: {
