@@ -12,8 +12,8 @@
       </h4>
       <div v-if="project.type == 'government'" class="text-gray-500">
         <p class="mt-4">{{ project.task }}</p>
-        <p class="inline-flex items-center">
-          <UsersIcon class="mr-1 w-4 h-4" /> {{ project.client }}
+        <p class="inline-flex items-start">
+          <UsersIcon class="mt-1 mr-1 shrink-0 w-4 h-4" /> {{ project.client }}
         </p>
         <p class="mt-4 text-sm">{{ project.service }}</p>
       </div>

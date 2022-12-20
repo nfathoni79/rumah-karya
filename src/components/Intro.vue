@@ -11,7 +11,7 @@
           A well-built identity must be easy to be recognized and memorized.
         </p>
         <p class="mb-8 font-light lg:text-xl">
-          <span class="p-1 bg-orange-600 font-normal text-orange-50">Rumah Karya Indonesia</span>
+          <span class="font-normal italic text-orange-600">Rumah Karya Indonesia</span>
           offers you exceptional brand visual capabilities that not only upholds the brand values,
           but also creates the visual quality and brand narrative.
         </p>
@@ -29,8 +29,8 @@
           We aim to have a strong brand presence
         </h2>
         <p class="mb-4 font-light lg:text-xl">
-          For us, <span class="p-1 bg-orange-600 font-normal text-orange-50">Branding</span> is all about
-          <span class="p-1 bg-orange-600 font-normal text-orange-50">Impactful Storytelling</span>.
+          For us, <span class="font-normal italic text-orange-600">Branding</span> is all about
+          <span class="font-normal italic text-orange-600">Impactful Storytelling</span>.
         </p>
         <p class="mb-8 font-light lg:text-xl">
           Every brand has a Story, whether the founders' inspirational story,
